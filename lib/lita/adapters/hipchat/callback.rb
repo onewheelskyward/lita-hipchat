@@ -28,7 +28,7 @@ module Lita
             source = Source.new(user: user, room: muc.jid.bare.to_s)
             message = Message.new(robot, text, source)
             Lita.logger.debug(
-              "Dispatching message to Lita from #{user.id} in MUC #{muc.jid}."
+              "Dispatching message '#{message.body}' to Lita from #{user.id} in MUC #{muc.jid}."
             )
             robot.receive(message)
           end
