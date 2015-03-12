@@ -16,7 +16,7 @@ module Lita
             source = Source.new(user: user)
             message = Message.new(robot, m.body, source)
             message.command!
-            Lita.logger.debug("Dispatching PM to Lita from #{user.id}.")
+            Lita.logger.debug("Dispatching PM #{message.body} to Lita from #{user.id}.")
             robot.receive(message)
           end
         end
@@ -54,12 +54,12 @@ module Lita
         end
 
         def user_by_jid(jid)
-          Lita.logger.debug("Looking up user with JID: #{jid}.")
+          # Lita.logger.debug("Looking up user with JID: #{jid}.")
           create_user(roster[jid].attributes)
         end
 
         def user_by_name(name)
-          Lita.logger.debug("Looking up user with name: #{name}.")
+          # Lita.logger.debug("Looking up user with name: #{name}.")
           items = roster.items.detect { |jid, item| item.iname == name }
           if items
             user_by_jid(items.first)
