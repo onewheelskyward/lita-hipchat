@@ -36,7 +36,9 @@ module Lita
         end
 
         def join(muc_domain, room)
+          Lita.logger.debug "Creating normalized jid from #{room}, #{muc_domain} and #{robot.name}"
           room_jid = normalized_jid(room, muc_domain, robot.name)
+          Lita.logger.debug "room_jid: #{room_jid}"
           if mucs[room_jid.bare.to_s]
             Lita.logger.debug "Already in room with JID #{room_jid.bare.to_s}"
             return
