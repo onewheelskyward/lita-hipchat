@@ -1,3 +1,35 @@
+# Fix this sucka.
+
+```
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/stream.rb:387:in `block in send'
+[2016-02-21 08:14:23 UTC] WARN: config.rooms is deprecated and will be removed in lita-hipchat 4.0. Use the built-in `join` and `part` commands to manage rooms instead.
+D, [2016-02-21T00:14:23.891432 #21382] DEBUG -- : SENDING:
+    <presence to='88506_chatops@conf.hipchat.com/NoNoNoBot' type='unavailable' xmlns='jabber:client'/>
+W, [2016-02-21T00:14:23.913559 #21382]  WARN -- : EXCEPTION:
+    IOError
+    closed stream
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/2.3.0/openssl/buffering.rb:322:in `syswrite'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/2.3.0/openssl/buffering.rb:322:in `do_write'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/2.3.0/openssl/buffering.rb:387:in `<<'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/stream.rb:346:in `block in send_data'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/stream.rb:344:in `synchronize'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/stream.rb:344:in `send_data'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/stream.rb:375:in `send'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/muc/helper/mucclient.rb:147:in `exit'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-hipchat-3.0.1/lib/lita/adapters/hipchat/connector.rb:88:in `part'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-hipchat-3.0.1/lib/lita/adapters/hipchat.rb:38:in `part'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-hipchat-3.0.1/lib/lita/adapters/hipchat.rb:64:in `block in shut_down'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-hipchat-3.0.1/lib/lita/adapters/hipchat.rb:64:in `each'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-hipchat-3.0.1/lib/lita/adapters/hipchat.rb:64:in `shut_down'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-4.7.0/lib/lita/robot.rb:169:in `shut_down'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/lita-hipchat-3.0.1/lib/lita/adapters/hipchat/connector.rb:121:in `block in register_exception_handler'
+    /home/akreps/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/xmpp4r-0.5.6/lib/xmpp4r/stream.rb:387:in `block in send'
+[2016-02-21 08:14:23 UTC] WARN: config.rooms is deprecated and will be removed in lita-hipchat 4.0. Use the built-in `join` and `part` commands to manage rooms instead.
+[2016-02-21 08:14:23 UTC] INFO: Disconnecting from HipChat.
+[2016-02-21 08:14:23 UTC] WARN: config.rooms is deprecated and will be removed in lita-hipchat 4.0. Use the built-in `join` and `part` commands to manage rooms instead.
+[2016-02-21 08:14:23 UTC] INFO: Disconnecting from HipChat.
+```
+
 # lita-hipchat
 
 [![Build Status](https://travis-ci.org/jimmycuadra/lita-hipchat.png?branch=master)](https://travis-ci.org/jimmycuadra/lita-hipchat)
